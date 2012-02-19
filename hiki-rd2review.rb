@@ -131,7 +131,7 @@ open( ofn_path, "r", {:external_encoding=>"euc-jp",
     l.gsub!( /^\ #RT/, '' )
     # 色々変換
     l.gsub!( /^\#.*/, '#@#' )                 # コメント
-    l.gsub!( /\(\(\*(.*)\*\)\)/, '\<em>{\1}') # 強調
+    l.gsub!( /\(\(\*(.*)\*\)\)/, '@<em>{\1}') # 強調
     l.gsub!( /\{\{toc\}\}/, '#@warn({{toc}})') # tocの変換は未実装なのでコメント
     l.gsub!( /\{\{toc_here\}\}/, '#@warn({{toc_here}})') # tocの変換は未実装なのでコメント
     # URL 変換
